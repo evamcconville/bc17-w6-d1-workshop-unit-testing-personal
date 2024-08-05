@@ -20,7 +20,7 @@ Your manager wants you to install and set up Vitest in the `proof-of-concept` pr
 
 Below is how you've started to break the problem down so far:
 
-- `cd` into the `proof-of-concept` project
+- `cd` into the `proof-of-concept` pcd roject
   - Why: If you don't `cd` into the subfolder first, then by default you'll install NPM packages to your current working directory, which probably isn't the right place.
 - Install Vitest as a dev dependency
 
