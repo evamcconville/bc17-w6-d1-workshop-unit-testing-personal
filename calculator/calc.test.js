@@ -36,3 +36,8 @@ test('squared number of 6, 10 should be 36', () => {
     const result = calculate('sq', 6, 10)
     expect(result).to.equal(36)
 }); 
+
+// test with '%' operator returning error
+test('using % operator', () => {
+        expect(() => calculate('%', 4, 5)).toThrowError()
+    })
