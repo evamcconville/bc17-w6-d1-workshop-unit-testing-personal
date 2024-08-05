@@ -1,6 +1,31 @@
 import { test, expect } from 'vitest'
 import { calculate } from './calculator'
 
+// tests without result const
+test('without result const', () => {
+    expect(() => { 
+        (calculate('+', 1, 1)).toBe(2)
+        (calculate('-', 8, 4)).toBe(4)
+        (calculate('*', 2, 2)).toBe(4)
+        (calculate('%', 4, 5)).toThrowError()
+        (calculate('🍕', 4, 5)).toThrowError()
+    })
+})
+
+// test with toBe instead of to.equal
+test('toBe', () => {
+    const result = calculate('+', 1, 1)
+    expect(result).toBe(2)
+}); 
+
+// test withough const result
+test('toBe', () => {
+    expect(calculate('+', 1, 1)).to.equal(2)
+}); 
+
+
+//group work below//
+
 // test addition
 test('addition of 1 and 1 should be 2', () => {
     const result = calculate('+', 1, 1)
